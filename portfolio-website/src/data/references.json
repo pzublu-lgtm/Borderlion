@@ -1,0 +1,78 @@
+{
+  "papers": [
+    {
+      "id": "berners-lee-weaving-the-web",
+      "title": "Tim Berners-Lee: Weaving the Web",
+      "type": "critical essay",
+      "year": 1999,
+      "url": "/references/berners-lee-weaving-the-web.pdf",
+      "excerpt": "A critical reflection on Berners-Lee's vision of the World Wide Web as a decentralized, collaborative ecosystem, interrogating its utopian assumptions, Eurocentric biases, and the limits of emergent digital systems."
+    },
+    {
+      "id": "lorusso-the-user-condition",
+      "title": "The User Condition: Computer Agency and Digital Behavior",
+      "type": "critical essay",
+      "year": 2021,
+      "url": "/references/the-user-condition.pdf",
+      "excerpt": "An analysis of Silvio Lorusso's critique of digital behavior, automation, and diminishing user agency, drawing on cybernetics, consumer capitalism, and the transformation of action into repetitive behavior."
+    },
+    {
+      "id": "image-as-digital-being",
+      "title": "Image as Digital Being",
+      "type": "field note",
+      "url": "/references/image-as-digital-being.pdf",
+      "excerpt": "An autoethnographic field note examining reliance on visually driven digital environments—particularly multiplayer games—and their effects on attention, habit formation, and immaterial value production."
+    },
+    {
+      "id": "posthuman-storytelling-warcraft",
+      "title": "Posthuman Storytelling: Warcraft Series",
+      "type": "research essay",
+      "url": "/references/posthuman-storytelling-warcraft.pdf",
+      "excerpt": "A posthuman analysis of character design and narrative depth in the Warcraft franchise, exploring agency, ethics, and identity through visual storytelling and RPG mechanics."
+    },
+    {
+      "id": "games-as-sites-of-meaning",
+      "title": "Games as Sites of Meaning",
+      "type": "research essay",
+      "url": "/references/games-as-sites-of-meaning.pdf",
+      "excerpt": "An exploration of how meaning, value, and identity are produced in RPG gaming through time investment, digital labor, and posthuman human–machine hybrids."
+    },
+    {
+      "id": "bugs-in-gaming-wow",
+      "title": "Bugs in Gaming: Classic World of Warcraft",
+      "type": "field note",
+      "url": "/references/bugs-in-gaming-wow.pdf",
+      "excerpt": "A reflective study on technological friction, bugs, and inaccessibility in early World of Warcraft, situating gameplay errors within socio-economic and postcolonial contexts."
+    },
+    {
+      "id": "evolution-of-frictions-wow",
+      "title": "Evolution of Frictions and Meaning in World of Warcraft",
+      "type": "field note",
+      "url": "/references/evolution-of-frictions-wow.pdf",
+      "excerpt": "An analysis of how automation, refinement, and speedrunning reshape player identity, community, and meaning-making in evolving digital ecosystems."
+    },
+    {
+      "id": "game-memory-digital-ecosystems",
+      "title": "Game Memory in Digital Ecosystems",
+      "type": "field note",
+      "url": "/references/game-memory-digital-ecosystems.pdf",
+      "excerpt": "A study of nostalgia, external knowledge systems, and cultural memory in World of Warcraft, examining how digital spaces preserve and reframe historical experience."
+    },
+    {
+      "id": "posthuman-intimacy-digital-ecosystems",
+      "title": "Posthuman Intimacy: Reconfiguring Desire and Connection in Digital Ecosystems",
+      "type": "research paper",
+      "year": 2025,
+      "url": "/references/posthuman-intimacy.pdf",
+      "excerpt": "A posthuman analysis of Grindr and Dirty Code, exploring how digital platforms algorithmically mediate desire, commodify intimacy, and reshape embodied relationality."
+    },
+    {
+      "id": "collection-01-textile-narrative",
+      "title": "0.1 — Story-Based Textile Collection",
+      "type": "project documentation",
+      "year": 2025,
+      "url": "/references/collection-01.pdf",
+      "excerpt": "A narrative-driven fashion collection exploring coming-of-age, mental illness, inheritance, and vulnerability through experimental textile processes and character-based silhouettes."
+    }
+  ]
+}
