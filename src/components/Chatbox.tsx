@@ -21,7 +21,13 @@ const buildAssets = (folder: string, files: string[]): Asset[] =>
         label: file.replace(/\.[^.]+$/, '')
     }));
 
-const collection13Assets = buildAssets('Collection 13', [
+const buildAssetsWithCredit = (folder: string, files: string[], credit: string): Asset[] =>
+    files.map((file) => ({
+        src: encodeURI(`${process.env.PUBLIC_URL}/${folder}/${file}`),
+        label: file.replace(/\.[^.]+$/, '') + '\n' + credit
+    }));
+
+const collection13Assets = buildAssetsWithCredit('Collection 13', [
     "Collection '13' - 2023 Mattias Oblikas, Mantas Krikstaponis, Joci.jpg",
     "Look  2 Collection '13' - 2023 Mattias Oblikas.jpg",
     "Look 1 Collection '13' - 2023 Mantas Krikstaponis.jpg",
@@ -32,7 +38,7 @@ const collection13Assets = buildAssets('Collection 13', [
     "Look 2 Collection '13'III - 2023 Mattias Oblikas.jpg",
     "Look 3 Collection '13' - 2023 Joci.jpg",
     "Look 3 Collection '13' II - 2023 Joci.jpg"
-]);
+], 'Photographed by Jaap van der Does');
 
 const zeroPointOneAssets = buildAssets('Collection Zero Point One', [
     'Finale.jpg',

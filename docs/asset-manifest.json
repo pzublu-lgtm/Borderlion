@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Borderlion/static/css/main.e3132d42.chunk.css",
-    "main.js": "/Borderlion/static/js/main.a5a9e167.chunk.js",
-    "main.js.map": "/Borderlion/static/js/main.a5a9e167.chunk.js.map",
+    "main.js": "/Borderlion/static/js/main.6d38ff96.chunk.js",
+    "main.js.map": "/Borderlion/static/js/main.6d38ff96.chunk.js.map",
     "runtime-main.js": "/Borderlion/static/js/runtime-main.e11ddcab.js",
     "runtime-main.js.map": "/Borderlion/static/js/runtime-main.e11ddcab.js.map",
     "static/js/2.54e6fff4.chunk.js": "/Borderlion/static/js/2.54e6fff4.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.e11ddcab.js",
     "static/js/2.54e6fff4.chunk.js",
     "static/css/main.e3132d42.chunk.css",
-    "static/js/main.a5a9e167.chunk.js"
+    "static/js/main.6d38ff96.chunk.js"
   ]
 }
