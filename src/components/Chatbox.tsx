@@ -211,7 +211,6 @@ const ShowcaseSelector: React.FC = () => {
                     <div className="selector__title">Choose what to explore</div>
                     <div className="selector__subtitle">Collections, process, and research displayed in immersive overlays.</div>
                 </div>
-                <div className="selector__accent">{accentText}</div>
             </div>
             <div className="selector__grid">
                 {entries.map((entry) => (
