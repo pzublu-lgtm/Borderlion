@@ -64,7 +64,7 @@ const entries: Entry[] = [
     {
         id: 'collection-zero-point-one',
         title: 'View Collection Zero Point One',
-        description: 'A/W 2024 fashion collection imagery',
+        description: 'Photographed by Team Peter Stigter',
         kind: 'images',
         assets: zeroPointOneAssets
     },
