@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 
-const CHARACTER_SRC = '/character.png';
+const CHARACTER_SRC = process.env.PUBLIC_URL + '/character.png';
 
 const chatLines = [
     "Hi. I'm Ramy. I design things. Systems, clothes, habits. Clicking me counts as research.",
