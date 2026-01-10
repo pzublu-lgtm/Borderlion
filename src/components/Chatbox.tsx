@@ -112,7 +112,7 @@ const entries: Entry[] = [
     }
 ];
 
-const accentPhrases = ['Select a path to enter.', 'Use arrows, wheel, or drag to move through the work.', 'Escape closes any overlay.'];
+const accentPhrases = ['Select a path to enter.', 'Escape closes any overlay.'];
 
 const ShowcaseSelector: React.FC = () => {
     const [activeEntry, setActiveEntry] = useState<Entry | null>(null);
