@@ -17,7 +17,7 @@ type Entry = {
 
 const buildAssets = (folder: string, files: string[]): Asset[] =>
     files.map((file) => ({
-        src: encodeURI(`/${folder}/${file}`),
+        src: encodeURI(`${process.env.PUBLIC_URL}/${folder}/${file}`),
         label: file.replace(/\.[^.]+$/, '')
     }));
 
