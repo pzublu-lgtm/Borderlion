@@ -22,16 +22,16 @@ const buildAssets = (folder: string, files: string[]): Asset[] =>
     }));
 
 const collection13Assets = buildAssets('Collection 13', [
-    "Collection '13' - 2023.jpg",
-    "Look  2 Collection '13' - 2023.jpg",
-    "Look 1 Collection '13' - 2023 (2).jpg",
-    "Look 1 Collection '13' - 2023.jpg",
-    "Look 1 Collection '13' 2023.jpg",
-    "Look 2 Collection '13' - 2023 (2).jpg",
-    "Look 2 Collection '13' - 2023 (3).jpg",
-    "Look 2 Collection '13' - 2023.jpg",
-    "Look 3 Collection '13' - 2023 (2).jpg",
-    "Look 3 Collection '13' - 2023.jpg"
+    "Collection '13' - 2023 Mattias Oblikas, Mantas Krikstaponis, Joci.jpg",
+    "Look  2 Collection '13' - 2023 Mattias Oblikas.jpg",
+    "Look 1 Collection '13' - 2023 Mantas Krikstaponis.jpg",
+    "Look 1 Collection '13' II 2023 Mantas Krikstaponis.jpg",
+    "Look 1 Collection '13' III 2023 Mantas Krikstaponis.jpg",
+    "Look 2 Collection '13' II - 2023 Mattias Oblikas.jpg",
+    "Look 2 Collection '13' IV - 2023 Mattias Oblikas.jpg",
+    "Look 2 Collection '13'III - 2023 Mattias Oblikas.jpg",
+    "Look 3 Collection '13' - 2023 Joci.jpg",
+    "Look 3 Collection '13' II - 2023 Joci.jpg"
 ]);
 
 const zeroPointOneAssets = buildAssets('Collection Zero Point One', [
