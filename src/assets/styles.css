@@ -356,8 +356,21 @@ body {
         gap: 24px;
     }
 
+    .hero__visual {
+        min-height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .character-canvas {
+        width: 100%;
+        max-width: 300px;
+    }
+
     .character-canvas__surface {
-        width: min(280px, 65vw);
+        width: 280px;
+        height: 430px;
     }
 
     .selector {
