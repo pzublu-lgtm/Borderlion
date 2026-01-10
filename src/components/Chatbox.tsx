@@ -22,27 +22,27 @@ const buildAssets = (folder: string, files: string[]): Asset[] =>
     }));
 
 const collection13Assets = buildAssets('Collection 13', [
-    "Collection '13' - 2023 Mattias Oblikas, Mantas Krikstaponis, Joci.jpg",
-    "Look  2 Collection '13' - 2023 Mattias Oblikas.jpg",
-    "Look 1 Collection '13' - 2023 Mantas Krikstaponis.jpg",
-    "Look 1 Collection '13' II 2023 Mantas Krikstaponis.jpg",
+    "Collection '13' - Mattias Oblikas, Mantas Krikstaponis, Joci.jpg",
+    "Look  2 Collection '13' - Mattias Oblikas.jpg",
+    "Look 1 Collection '13' - Mantas Krikstaponis.jpg",
+    "Look 1 Collection '13' II - Mantas Krikstaponis.jpg",
     "Look 1 Collection '13' III 2023 Mantas Krikstaponis.jpg",
-    "Look 2 Collection '13' II - 2023 Mattias Oblikas.jpg",
-    "Look 2 Collection '13' IV - 2023 Mattias Oblikas.jpg",
-    "Look 2 Collection '13'III - 2023 Mattias Oblikas.jpg",
-    "Look 3 Collection '13' - 2023 Joci.jpg",
-    "Look 3 Collection '13' II - 2023 Joci.jpg"
+    "Look 2 Collection '13' II - Mattias Oblikas.jpg",
+    "Look 2 Collection '13' IV - Mattias Oblikas.jpg",
+    "Look 2 Collection '13'III - Mattias Oblikas.jpg",
+    "Look 3 Collection '13' - Joci.jpg",
+    "Look 3 Collection '13' II - Joci.jpg"
 ]);
 
 const zeroPointOneAssets = buildAssets('Collection Zero Point One', [
-    'Finale.jpg',
-    'Future Self II.jpg',
-    'Future Self Truth.jpg',
-    'Future Self.jpg',
-    'Self Finale.jpg',
-    'Self.jpg',
-    'Void Feminine I.jpg',
-    'Void Feminine II.jpg'
+    'Finale - Mantas Krikstaponis.jpg',
+    'Future Self - Liwia Labuz.jpg',
+    'Future Self II - Liwia Labuz.jpg',
+    'Future Self Truth - Ramy Toma.jpg',
+    'Self - Mathijs.jpg',
+    'Self Finale - Mantas Krikstaponis and Ramy Toma.jpg',
+    'Void Feminine I - Elle.jpg',
+    'Void Feminine II - Elle.jpg'
 ]);
 
 const processAssets = buildAssets(
