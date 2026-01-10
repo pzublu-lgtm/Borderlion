@@ -8,7 +8,7 @@ import TextilePhilosophy from './components/TextilePhilosophy';
 
 const App: React.FC = () => {
   return (
-    <Router>
+    <Router basename="/Borderlion">
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/projects" component={ProjectsGrid} />
