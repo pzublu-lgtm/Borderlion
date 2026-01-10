@@ -237,7 +237,7 @@ const ShowcaseSelector: React.FC = () => {
                             <div>
                                 <div className="overlay__eyebrow">{activeEntry.kind === 'images' ? 'Image roll' : 'PDF viewer'}</div>
                                 <div className="overlay__title">{activeEntry.title}</div>
-                                <div className="overlay__subtitle">Use mouse wheel, drag, arrows, or escape to navigate.</div>
+                                <div className="overlay__subtitle">{activeEntry.description}</div>
                             </div>
                             <button type="button" className="overlay__close" aria-label="Close" onClick={closeOverlay}>
                                 X
