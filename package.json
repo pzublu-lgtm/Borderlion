@@ -2,6 +2,7 @@
   "name": "portfolio-website",
   "version": "1.0.0",
   "description": "A portfolio website featuring a Digimon-like character and an AI assistant chatbox.",
+  "homepage": "https://pzublu-lgtm.github.io/Borderlion",
   "main": "src/main.tsx",
   "scripts": {
     "start": "set NODE_OPTIONS=--openssl-legacy-provider&& react-scripts start",
