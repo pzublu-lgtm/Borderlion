@@ -22,7 +22,7 @@ const buildAssets = (folder: string, files: string[]): Asset[] =>
     }));
 
 const collection13Assets = buildAssets('Collection 13', [
-    "Collection '13' - Mattias Oblikas, Mantas Krikstaponis, Joci.jpg",
+    "Collection '13' - Mattias Oblikas, Mantas Krikstaponis, József Száz.jpg",
     "Look  2 Collection '13' - Mattias Oblikas.jpg",
     "Look 1 Collection '13' - Mantas Krikstaponis.jpg",
     "Look 1 Collection '13' II - Mantas Krikstaponis.jpg",
@@ -30,8 +30,8 @@ const collection13Assets = buildAssets('Collection 13', [
     "Look 2 Collection '13' II - Mattias Oblikas.jpg",
     "Look 2 Collection '13' IV - Mattias Oblikas.jpg",
     "Look 2 Collection '13'III - Mattias Oblikas.jpg",
-    "Look 3 Collection '13' - Joci.jpg",
-    "Look 3 Collection '13' II - Joci.jpg"
+    "Look 3 Collection '13' - József Száz.jpg",
+    "Look 3 Collection '13' II - József Száz.jpg"
 ]);
 
 const zeroPointOneAssets = buildAssets('Collection Zero Point One', [
@@ -109,6 +109,13 @@ const entries: Entry[] = [
         description: 'Research PDF overlay',
         kind: 'pdf',
         assets: buildAssets('Research', ['Posthuman Intimacy - Reconfiguring Desire and Connection in Digital Ecosystems.pdf'])
+    },
+    {
+        id: 'contact-me',
+        title: 'Contact Me',
+        description: 'Send me a message',
+        kind: 'images',
+        assets: []
     }
 ];
 
@@ -116,7 +123,16 @@ const accentPhrases = ['Select a path to enter.', 'Escape closes any overlay.'];
 
 const ShowcaseSelector: React.FC = () => {
     const [activeEntry, setActiveEntry] = useState<Entry | null>(null);
+    const [showContactModal, setShowContactModal] = useState(false);
+    const [contactForm, setContactForm] = useState({ email: '', subject: '', message: '' });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitMessage, setSubmitMessage] = useState<string | null>(null);
     const scrollerRef = useRef<HTMLDivElement | null>(null);
+
+    // Initialize form state
+    useEffect(() => {
+        // No initialization needed
+    }, []);
 
     const accentText = useMemo(() => accentPhrases[Math.floor(Math.random() * accentPhrases.length)], []);
 
@@ -138,6 +154,7 @@ const ShowcaseSelector: React.FC = () => {
     useEffect(() => {
         const handleKeyDown = (event: KeyboardEvent) => {
             if (event.key === 'Escape') {
+                setShowContactModal(false);
                 setActiveEntry(null);
             }
             if (activeEntry?.kind === 'images') {
@@ -217,15 +234,21 @@ const ShowcaseSelector: React.FC = () => {
                     <button
                         key={entry.id}
                         className="selector__card"
-                        onClick={() => setActiveEntry(entry)}
+                        onClick={() => {
+                            if (entry.id === 'contact-me') {
+                                setShowContactModal(true);
+                            } else {
+                                setActiveEntry(entry);
+                            }
+                        }}
                         aria-haspopup="dialog"
-                        aria-label={`${entry.title} (${entry.kind === 'images' ? 'images' : 'PDF'})`}
+                        aria-label={entry.id === 'contact-me' ? entry.title : `${entry.title} (${entry.kind === 'images' ? 'images' : 'PDF'})`}
                     >
                         <div className="selector__card-text">
                             <div className="selector__card-title">{entry.title}</div>
                             <div className="selector__card-desc">{entry.description}</div>
                         </div>
-                        <div className="pill">{entry.kind === 'images' ? 'Images' : 'PDF'}</div>
+                        {entry.id !== 'contact-me' && <div className="pill">{entry.kind === 'images' ? 'Images' : 'PDF'}</div>}
                     </button>
                 ))}
             </div>
@@ -244,6 +267,109 @@ const ShowcaseSelector: React.FC = () => {
                             </button>
                         </div>
                         {renderOverlayContent()}
+                    </div>
+                </div>
+            )}
+
+            {showContactModal && (
+                <div className="overlay" role="dialog" aria-modal="true" aria-label="Contact Me" onClick={() => setShowContactModal(false)}>
+                    <div className="overlay__panel overlay__panel--contact" onClick={(event) => event.stopPropagation()}>
+                        <div className="overlay__top">
+                            <div>
+                                <div className="overlay__eyebrow">Contact Form</div>
+                                <div className="overlay__title">Send a Message</div>
+                                <div className="overlay__subtitle">To Borderlion</div>
+                            </div>
+                            <button type="button" className="overlay__close" aria-label="Close" onClick={() => setShowContactModal(false)}>
+                                X
+                            </button>
+                        </div>
+                        <div className="overlay__body overlay__body--contact">
+                            <form className="contact-form" onSubmit={async (e) => {
+                                e.preventDefault();
+                                setIsSubmitting(true);
+                                setSubmitMessage(null);
+
+                                try {
+                                    const discordWebhookUrl = 'https://discord.com/api/webhooks/1460597168820846594/2UxLl35EUSXzNvvhM8yw7tI_8EVCZiK654lRCkqdWzgXUR_Yq3cD4R9fSRMpjWs_GD2M';
+                                    
+                                    const response = await fetch(discordWebhookUrl, {
+                                        method: 'POST',
+                                        headers: {
+                                            'Content-Type': 'application/json'
+                                        },
+                                        body: JSON.stringify({
+                                            content: '',
+                                            embeds: [
+                                                {
+                                                    title: contactForm.subject,
+                                                    description: contactForm.message,
+                                                    color: 0x6cf4ff,
+                                                    footer: {
+                                                        text: 'Portfolio Contact Form'
+                                                    },
+                                                    timestamp: new Date().toISOString()
+                                                }
+                                            ]
+                                        })
+                                    });
+
+                                    if (response.ok) {
+                                        setSubmitMessage('Message sent successfully!');
+                                        setContactForm({ email: '', subject: '', message: '' });
+                                        
+                                        setTimeout(() => {
+                                            setShowContactModal(false);
+                                            setSubmitMessage(null);
+                                        }, 2000);
+                                    } else {
+                                        setSubmitMessage('Error sending message. Please try again.');
+                                    }
+                                } catch (error) {
+                                    setSubmitMessage('Error sending message. Please try again.');
+                                    console.error('Discord webhook error:', error);
+                                } finally {
+                                    setIsSubmitting(false);
+                                }
+                            }}>
+                                <div className="form-group">
+                                    <label htmlFor="contact-subject">Subject</label>
+                                    <input
+                                        type="text"
+                                        id="contact-subject"
+                                        value={contactForm.subject}
+                                        onChange={(e) => setContactForm({ ...contactForm, subject: e.target.value })}
+                                        required
+                                        placeholder="What is this about?"
+                                        disabled={isSubmitting}
+                                    />
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="contact-message">Message</label>
+                                    <textarea
+                                        id="contact-message"
+                                        value={contactForm.message}
+                                        onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
+                                        required
+                                        placeholder="Your message..."
+                                        rows={6}
+                                        disabled={isSubmitting}
+                                    />
+                                </div>
+                                {submitMessage && (
+                                    <div className={`form-message ${submitMessage.includes('successfully') ? 'form-message--success' : 'form-message--error'}`}>
+                                        {submitMessage}
+                                    </div>
+                                )}
+                                <button 
+                                    type="submit" 
+                                    className="contact-submit"
+                                    disabled={isSubmitting}
+                                >
+                                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             )}
