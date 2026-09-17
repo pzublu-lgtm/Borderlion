@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Borderlion/static/css/main.1dd3f984.chunk.css",
-    "main.js": "/Borderlion/static/js/main.b438c47b.chunk.js",
-    "main.js.map": "/Borderlion/static/js/main.b438c47b.chunk.js.map",
+    "main.css": "/Borderlion/static/css/main.f09bdf9a.chunk.css",
+    "main.js": "/Borderlion/static/js/main.734ed2b9.chunk.js",
+    "main.js.map": "/Borderlion/static/js/main.734ed2b9.chunk.js.map",
     "runtime-main.js": "/Borderlion/static/js/runtime-main.e11ddcab.js",
     "runtime-main.js.map": "/Borderlion/static/js/runtime-main.e11ddcab.js.map",
-    "static/js/2.54e6fff4.chunk.js": "/Borderlion/static/js/2.54e6fff4.chunk.js",
-    "static/js/2.54e6fff4.chunk.js.map": "/Borderlion/static/js/2.54e6fff4.chunk.js.map",
+    "static/js/2.6dc03583.chunk.js": "/Borderlion/static/js/2.6dc03583.chunk.js",
+    "static/js/2.6dc03583.chunk.js.map": "/Borderlion/static/js/2.6dc03583.chunk.js.map",
     "index.html": "/Borderlion/index.html",
-    "static/css/main.1dd3f984.chunk.css.map": "/Borderlion/static/css/main.1dd3f984.chunk.css.map",
-    "static/js/2.54e6fff4.chunk.js.LICENSE.txt": "/Borderlion/static/js/2.54e6fff4.chunk.js.LICENSE.txt"
+    "static/css/main.f09bdf9a.chunk.css.map": "/Borderlion/static/css/main.f09bdf9a.chunk.css.map",
+    "static/js/2.6dc03583.chunk.js.LICENSE.txt": "/Borderlion/static/js/2.6dc03583.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e11ddcab.js",
-    "static/js/2.54e6fff4.chunk.js",
-    "static/css/main.1dd3f984.chunk.css",
-    "static/js/main.b438c47b.chunk.js"
+    "static/js/2.6dc03583.chunk.js",
+    "static/css/main.f09bdf9a.chunk.css",
+    "static/js/main.734ed2b9.chunk.js"
   ]
 }
