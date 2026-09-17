@@ -1,11 +1,12 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 type Asset = {
     src: string;
     label: string;
 };
 
-type EntryKind = 'images' | 'pdf';
+type EntryKind = 'images' | 'pdf' | 'page';
 
 type Entry = {
     id: string;
@@ -76,6 +77,13 @@ const entries: Entry[] = [
         assets: processAssets
     },
     {
+        id: 'portfolio-2026',
+        title: 'View Portfolio 2026',
+        description: 'Complete presentation with embedded motion',
+        kind: 'page',
+        assets: []
+    },
+    {
         id: 'zero-point-one-book',
         title: 'View Zero Point One - The Book',
         description: 'Lookbook PDF for collection 0.1',
@@ -122,6 +130,7 @@ const entries: Entry[] = [
 const accentPhrases = ['Select a path to enter.', 'Escape closes any overlay.'];
 
 const ShowcaseSelector: React.FC = () => {
+    const history = useHistory();
     const [activeEntry, setActiveEntry] = useState<Entry | null>(null);
     const [showContactModal, setShowContactModal] = useState(false);
     const [contactForm, setContactForm] = useState({ email: '', subject: '', message: '' });
@@ -237,18 +246,20 @@ const ShowcaseSelector: React.FC = () => {
                         onClick={() => {
                             if (entry.id === 'contact-me') {
                                 setShowContactModal(true);
+                            } else if (entry.kind === 'page') {
+                                history.push('/portfolio-2026');
                             } else {
                                 setActiveEntry(entry);
                             }
                         }}
                         aria-haspopup="dialog"
-                        aria-label={entry.id === 'contact-me' ? entry.title : `${entry.title} (${entry.kind === 'images' ? 'images' : 'PDF'})`}
+                        aria-label={entry.id === 'contact-me' ? entry.title : `${entry.title} (${entry.kind === 'images' ? 'images' : entry.kind === 'page' ? 'page' : 'PDF'})`}
                     >
                         <div className="selector__card-text">
                             <div className="selector__card-title">{entry.title}</div>
                             <div className="selector__card-desc">{entry.description}</div>
                         </div>
-                        {entry.id !== 'contact-me' && <div className="pill">{entry.kind === 'images' ? 'Images' : 'PDF'}</div>}
+                        {entry.id !== 'contact-me' && <div className="pill">{entry.kind === 'images' ? 'Images' : entry.kind === 'page' ? 'Page' : 'PDF'}</div>}
                     </button>
                 ))}
             </div>
